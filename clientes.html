@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random store</title>
+    <!-- Jquery -->
+        <script src="././lib/jquery-3.5.1.min.js"></script>
+
+    <!-- Popper -->
+        <script src="././lib/popper.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+        <link rel="stylesheet" href="././lib/bootstrap/css/bootstrap.min.css">
+        <script src="././lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Data tables -->
+        <link rel="stylesheet" href="././lib/dataTables/datatables.min.css">
+        <script src="././lib/dataTables/datatables.js"></script>
+    <!-- clientes.js -->
+        <script src="clientes.js"></script>
+    </head>
+    <body>
+
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="clientes.html">Random Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="clientes.html">Home</a>
+                    </li>            
+                </ul>
+            </div>
+        </nav>
+
+        <!-- clients table -->
+        <div class="container-fluid d-flex justify-content-center">
+            <table id="table" class="display dataTable" style="cursor: pointer;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Direccion</th>                                
+                        <th>Tipo de Cliente</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="p-3">
+                <button type="button" class="btn btn-primary" id="load">Cargar Datos</button>
+            </div>
+            <div class="p-3">
+                <button type="button" class="btn btn-primary" id="del">Eliminar</button>
+            </div>                        
+        </div> 
+        <br>
+
+        <!-- clients form -->
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                
+                <div class="col-md-6 bg-light text-dark">
+                    <div class="d-flex justify-content-center text-secondary">
+                        <h4>Gestion de Clientes</h4>                        
+                    </div>
+                    <div class="d-flex justify-content-center text-secondary">
+                        <small class="form-text text-danger">Todos los campos son requeridos</small>
+                    </div>                    
+                    <form id="client-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="John">
+                            <small class="form-text text-muted">Nombre de cliente.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" placeholder="Doe">
+                            <small class="form-text text-muted">Apellido de cliente.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Direccion</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Av españa">
+                            <small class="form-text text-muted">Direccion de cliente.</small>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="tcliente">Tipo de Cliente</label>
+                            <select class="form-control" id="tcliente">
+                              <option value="2">Invitado</option>
+                              <option value="1">Fijo</option>
+                              <option value="3">VIP</option>
+                            </select>
+                            <small class="form-text text-muted">Tipo de suscripcion.</small>
+                        </div>  
+                        <div class="d-flex justify-content-center">
+                            <div class="p-3">
+                                <button type="button" class="btn btn-primary" id="add">Agregar</button>
+                            </div>
+                            <div class="p-3">
+                                <button type="button" class="btn btn-primary" id="edit">Editar</button>
+                            </div> 
+                            <div class="p-3">
+                                <button type="button" class="btn btn-primary" id="clean">Limpiar Formulario</button>
+                            </div>                           
+                        </div>              
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
